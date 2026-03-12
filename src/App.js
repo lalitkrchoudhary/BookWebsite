@@ -8,20 +8,12 @@ function App() {
   return (
     <div className="books-container" style={{ display: 'flex', flexDirection: 'row', gap: '16px', flexWrap: 'wrap', width: '100%' }}>
     
-      {books_data.map((book)=>{
-        const {id,image,title,author}=book;
-        console.log(book)
-        return(
-          // <div>
-          // <img src={image} alt=""/>
-          // </div>
+      {books_data.map((book) => {
+        return (
           <Booklist
-           key={book.id}
-            // book={book} or
+            key={book.id}
             {...book}
-            
-            />
-         
+          />
         )
       })}
 
