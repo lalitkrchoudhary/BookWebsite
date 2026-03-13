@@ -20,6 +20,7 @@ const UseStateArray = () => {
   return(
     <>
     <h1>Book data</h1>
+    <p style={{ margin: '0 0 12px 0', color: '#444' }}>Contact: 7578923796</p>
     <div className="books-container">
       {books.map((book) => {
         return (

@@ -3,14 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Setup from "./tutorial/1-useState/setup/3-useState-array"
+import UseEffects from "./tutorial/2-useEffect/setup/1-useEffect-basics"
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
     <Setup/>
+    <UseEffects/>
     
-    
+
+
   </React.StrictMode>
 );
 
