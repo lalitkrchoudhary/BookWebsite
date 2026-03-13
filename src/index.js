@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './App.css';
 import reportWebVitals from './reportWebVitals';
 import Setup from "./tutorial/1-useState/setup/3-useState-array"
 import UseEffects from "./tutorial/2-useEffect/setup/1-useEffect-basics"
+import UseEffectsThree from "./tutorial/2-useEffect/setup/3-useEffect-fetch-data"
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,6 +14,7 @@ root.render(
     {/* <App /> */}
     <Setup/>
     <UseEffects/>
+    <UseEffectsThree/>
     
 
 

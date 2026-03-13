@@ -18,7 +18,7 @@ const UseEffectBasics = () => {
         document.title = `new message ${value}`
       }
     },[value]);
-    console.log("this is very good")
+    
 
 
 
