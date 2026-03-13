@@ -1,22 +1,30 @@
 import React from 'react'
+import { books_data } from '../data/books';
+
 
 const Booklist = (props) => {
-  const { image, title, author } = props
+const [books, setBooks]=React.useState(books_data)
 
-  const clickHandler=(e)=>{
-    console.log(e.target)
-    alert(`The description is: ${title}`);
-  }
+
+  const {id, image, title, author, removeHandler } = props
+
+ 
+
+ 
 
   return (
+    <>
     <article className="book-card" onMouseOver={()=> {console.log(title)}}>
       <img className="book-image" src={image} alt={title} />
       <div className="book-info">
         <p className="book-title">{title}</p>
         <h4 className="book-author">{author}</h4>
-        <button onClick={clickHandler}>click for description</button>
+        <button onClick={()=>removeHandler(id)}>Delete ❌</button>
       </div>
+       
     </article>
+    
+    </>
   )
 }
 
