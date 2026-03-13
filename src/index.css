@@ -11,3 +11,93 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Book grid and card styles (use index.css as requested) */
+.books-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #f6f8fa;
+  display: grid;
+  /* Aim for 5 columns on wide screens; allow wrapping on small screens */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  justify-items: center;
+}
+
+.book-card {
+  width: 100%;
+  max-width: 220px; /* card will size within the grid column */
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(2,6,23,0.08);
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.book-info {
+  width: 100%;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.book-title {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+  color: #222;
+  font-weight: 600;
+}
+
+.book-author {
+  margin: 0 0 8px 0;
+  font-size: 13px;
+  color: #444;
+  font-weight: 700;
+}
+
+.book-info button {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Responsive: collapse columns on smaller screens */
+@media (max-width: 1200px) {
+  .books-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .books-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .books-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .book-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 420px) {
+  .books-container {
+    grid-template-columns: 1fr;
+  }
+}

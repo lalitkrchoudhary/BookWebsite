@@ -20,19 +20,13 @@ const UseStateArray = () => {
   return(
     <>
     <h1>Book data</h1>
-    {
-        books.map((book)=>{
-            // const {id,title,author,image}=book
-            return(
-                <div>
-              <Booklist key={book.id} {...book}  removeHandler={removeHandler} />
-             
-              </div>
-              
-            )
-            
-        })
-    }
+    <div className="books-container">
+      {books.map((book) => {
+        return (
+          <Booklist key={book.id} {...book} removeHandler={removeHandler} />
+        )
+      })}
+    </div>
     <button onClick={deleteHandeler}>Delete All ❌</button>
     
     </>

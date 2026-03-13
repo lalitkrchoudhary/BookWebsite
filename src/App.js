@@ -6,7 +6,7 @@ import { books_data } from './data/books';
 
 function App() {
   return (
-    <div className="books-container" style={{ display: 'flex', flexDirection: 'row', gap: '16px', flexWrap: 'wrap', width: '100%' }}>
+    <div className="books-container">
     
       {books_data.map((book) => {
         return (
