@@ -1,11 +1,7 @@
 import React from 'react'
-import { books_data } from '../data/books';
 
 
 const Booklist = (props) => {
-const [books, setBooks]=React.useState(books_data)
-
-
   const {id, image, title, author, removeHandler } = props
 
  
